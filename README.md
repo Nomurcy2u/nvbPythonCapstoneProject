@@ -1,4 +1,4 @@
-#NVB Python Capstone Project; nvb_cybersecurity_incidents Analysis. 
+# NVB Python Capstone Project; nvb_cybersecurity_incidents Analysis. 
 
 ## What it does: 
 It takes and analyzes the nvb_cybersecurity_incidents.csv file and returns graphs and insights specifically regarding the data provided. 
