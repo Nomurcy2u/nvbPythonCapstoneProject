@@ -20,6 +20,7 @@ def test():
   print(df.info())
 
 def createBarPlot(df,title,x,y):
+  #Basis for a plot function. 
   df.plot(kind="bar")
   plt.title(title)
   plt.xlabel(x)
@@ -50,14 +51,12 @@ print("2nd QUESTION:  Which attacks generally cause the MOST data loss?")
 #First graph
 lineFunction()
 meanSeverityVal = df.groupby('severity')['hour_of_day'].mean()
-#print(f"{meanSeverityVal}")
 createBarPlot(meanSeverityVal,"Mean severity value per hour","severity","avg time of day")
 print("Findings: Most attacks occur around 12")
 
 #2nd Graph:
 lineFunction()
 meanDataLoss = df.groupby('severity')['data_loss_occurred'].mean()
-#print(f"{meanSeverityVal}")
 createBarPlot(meanDataLoss,"Mean data loss per severity","severity","avg data loss")
 print("Findings: Data loss generally only occurs in high to critical severity attacks")
 
